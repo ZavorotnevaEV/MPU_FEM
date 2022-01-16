@@ -1,26 +1,20 @@
 # ---Основной файл---#
 
+import utils.postrpocessor.plot as plot
+import utils.solver as solver
+from models.element_type import *
 # ---Импортируйте сюда свои библиотеки---#
 from models.fe_model import FeModel
-from models.mesh_params import MeshParams
-from utils.preprocessor import cad, mesher, load_utils
-from models.load import Load
-from models.load_type import LoadType
-from models.region import Region
-from models.region_type import RegionType
-from models.bc_type import BCType
-from models.element_type import *
-from models.mesh_type import *
-from models.material import *
-from models.material_type import *
-from models.material_property import *
 from models.load_step import *
 from models.load_step_type import *
+from models.material import *
+from models.material_property import *
+from models.material_type import *
+from models.mesh_params import MeshParams
+from models.mesh_type import *
 from models.property import Property
-import utils.solver as solver
-import utils.postrpocessor.plot as plot
-
-
+from models.region_type import RegionType
+from utils.preprocessor import cad, mesher, load_utils
 
 rect1 = cad.create_rectangle(1, "Rectangle1", 0, 1, 0, 1)
 pid1 = Property(1, 'pid1')
